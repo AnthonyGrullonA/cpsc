@@ -31,9 +31,10 @@ class TipoDeOperacion(models.Model):
 class Cliente(models.Model):
     OPCIONES_STATUS_CLIENTE = (
         ('activo', 'Cliente Activo'),
-        ('primario', 'Cliente Primario'),
+        ('inactivo', 'Cliente Inactivo'),
     )
     id_cliente = models.AutoField(primary_key=True)
+    nomeclatura = models.CharField(max_length=200)
     nombre_empresa = models.CharField(max_length=200)
     nombre_contacto_directo = models.CharField(max_length=200)
     correo_contacto_directo = models.EmailField(unique=True)
