@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from pagescontent import views as pc
 
 urlpatterns = [
     path('napadm/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    
     #URLS pagescontent
     path('', include('pagescontent.urls')),
     # . . .

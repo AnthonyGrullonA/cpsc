@@ -488,7 +488,6 @@ class ReporteSemanal(models.Model):
         db_table_comment = 'Tabla con los registros de las llaves que se entregaron a los clientes'
 
 
-# DB2 PRUEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 class Restringidos(models.Model):
     id_restringidos = models.AutoField(primary_key=True)
     nombre_empresa = models.CharField(max_length=50)

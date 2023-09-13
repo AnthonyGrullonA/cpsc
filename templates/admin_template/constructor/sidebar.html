@@ -1,0 +1,159 @@
+{% load static %}
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="{% url 'Dashboard' %}" class="brand-link">
+      <img src="{% static 'AdminLTE/img/naplogo.png' %}" class="brand-image img-square elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Service Center</span>
+    </a>
+
+
+    <div class="sidebar">
+
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+          <li class="nav-item">
+            <a href="{% url 'Dashboard' %}" class="nav-link">
+              <i class="nav-icon fa fa-tachometer"></i>
+                <p style="color: white;">Dashboard</p>
+                {% comment %} <span class="right badge badge-danger">New</span> {% endcomment %}
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-user"></i>
+              <p style="color: white;">User Manager </p>
+                <p><i class="fas fa-angle-left right"></i></p>
+                {% comment %} <span class="badge badge-info right">6</span> {% endcomment %}
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-user-plus nav-icon"></i>
+                  <p style="color: white;">Register User</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-users nav-icon"></i>
+                  <p style="color: white;">Groups User</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-user-times nav-icon"></i>
+                  <p style="color: white;">Desactivate Users</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-server nav-icon"></i>
+                  Users View
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+          </li>
+          <li class="nav-header">Time manager</li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p style="color: white;">Calendar</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-columns"></i>
+              <p style="color: white;">Kanban Board</p>
+            </a>
+          </li>
+
+ 
+          <li class="nav-header">Client Manager</li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-address-book"></i>
+              <p style="color: white;">Clients Contact</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-university"></i>
+              <p style="color: white;">Client List</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-magic"></i>
+              <p style="color: white;">Order of service</p>
+            </a>
+          </li>
+
+          <li class="nav-header">Information Bank</li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-industry nav-icon"></i>
+              <p style="color: white;">Industria</p>
+            </a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-hdd-o nav-icon"></i>
+              <p style="color: white;">Services</p>
+            </a>
+          </li>
+
+          <li class="nav-header">ACL</li>
+      
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-eye nav-icon"></i>
+              <p style="color: white;">Permanent ACL</p>
+            </a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-eye-slash nav-icon"></i>
+              <p style="color: white;">Temporary ACL</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-exclamation-triangle nav-icon"></i>
+              <p style="color: white;">Restricted clients</p>
+            </a>
+          </li>
+
+          <li class="nav-header">Conduces</li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-file-text nav-icon"></i>
+              <p style="color: white;">Conduce input</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-file-text-o nav-icon"></i>
+              <p style="color: white;">Conduce output</p>
+            </a>
+          </li>
+
+          <li class="nav-header">Reports</li>
+          <span class="right badge badge-danger">To be determinate</span>
+
+
+
+        </ul>
+      </nav>
+    </div>
+  </aside>

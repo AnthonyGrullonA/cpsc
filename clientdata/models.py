@@ -21,6 +21,13 @@ class Cliente(models.Model):
         ('publico', 'Público'),
         ('privado', 'Privado'),
     )
+    
+    OPTCIONES_LOCALIDAD = (
+        ('NAP West', 'NAP West'),
+        ('NAP East', 'NAP East'),
+        ('NAP Cloud', 'NAP Cloud'),
+        ('N/A', 'N/A'),
+    )
 
     id_cliente = models.AutoField(primary_key=True)
     nomeclatura = models.CharField(max_length=200)
@@ -35,4 +42,5 @@ class Cliente(models.Model):
     tipo_operacion = models.CharField(max_length=20, choices=OPCIONES_TIPO_OPERACION)
     tipo_entidad = models.CharField(max_length=20, choices=OPCIONES_TIPO_ENTIDAD)
     industria = models.ForeignKey(Industria, on_delete=models.CASCADE)
+    site = models.CharField(max_length=20,choices=OPTCIONES_LOCALIDAD, default='')
  
