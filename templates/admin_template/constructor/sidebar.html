@@ -12,144 +12,110 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-          <li class="nav-item">
+          {% comment %} <li class="nav-item">
             <a href="{% url 'Dashboard' %}" class="nav-link">
               <i class="nav-icon fa fa-tachometer"></i>
-                <p style="color: white;">Dashboard</p>
-                {% comment %} <span class="right badge badge-danger">New</span> {% endcomment %}
+                <p style="color: white;">Panel de control</p>
+                <span class="right badge badge-danger">New</span>
             </a>
+          </li> {% endcomment %}
+
           </li>
+          <li class="nav-header">Control de tiempo</li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-user"></i>
-              <p style="color: white;">User Manager </p>
-                <p><i class="fas fa-angle-left right"></i></p>
-                {% comment %} <span class="badge badge-info right">6</span> {% endcomment %}
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-user-plus nav-icon"></i>
-                  <p style="color: white;">Register User</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-users nav-icon"></i>
-                  <p style="color: white;">Groups User</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-user-times nav-icon"></i>
-                  <p style="color: white;">Desactivate Users</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-server nav-icon"></i>
-                  Users View
-                </a>
-              </li>
-            </ul>
-          </li>
-
-
-          </li>
-          <li class="nav-header">Time manager</li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'Calendario' %}" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
-              <p style="color: white;">Calendar</p>
+              <p style="color: white;">Calendario</p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'TaskList' %}" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>
-              <p style="color: white;">Kanban Board</p>
+              <p style="color: white;">Lista de tareas</p>
             </a>
           </li>
 
  
-          <li class="nav-header">Client Manager</li>
+          <li class="nav-header">Control de clientes</li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'ClientContact' %}" class="nav-link">
               <i class="nav-icon fa fa-address-book"></i>
-              <p style="color: white;">Clients Contact</p>
+              <p style="color: white;">Contacto de clientes</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'ClientList' %}" class="nav-link">
               <i class="nav-icon fa fa-university"></i>
-              <p style="color: white;">Client List</p>
+              <p style="color: white;">Listado de clientes</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'ServiceOrder' %}" class="nav-link">
               <i class="nav-icon fa fa-magic"></i>
-              <p style="color: white;">Order of service</p>
+              <p style="color: white;">Orden de servicios</p>
             </a>
           </li>
 
-          <li class="nav-header">Information Bank</li>
+          <li class="nav-header">Banco de informacion</li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'Industry' %}" class="nav-link">
               <i class="fa fa-industry nav-icon"></i>
               <p style="color: white;">Industria</p>
             </a>
           </li>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'Services' %}" class="nav-link">
               <i class="fa fa-hdd-o nav-icon"></i>
-              <p style="color: white;">Services</p>
+              <p style="color: white;">Servicios</p>
             </a>
           </li>
 
           <li class="nav-header">ACL</li>
       
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'ACL' %}" class="nav-link">
               <i class="fa fa-eye nav-icon"></i>
-              <p style="color: white;">Permanent ACL</p>
+              <p style="color: white;">ACL Permanente</p>
             </a>
           </li>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'ACL_TEMP' %}" class="nav-link">
               <i class="fa fa-eye-slash nav-icon"></i>
-              <p style="color: white;">Temporary ACL</p>
+              <p style="color: white;">ACL Temporal</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'ClientesRestringidos' %}" class="nav-link">
               <i class="fa fa-exclamation-triangle nav-icon"></i>
-              <p style="color: white;">Restricted clients</p>
+              <p style="color: white;">Clientes restringidos</p>
             </a>
           </li>
 
           <li class="nav-header">Conduces</li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'ConduceEntrada' %}" class="nav-link">
               <i class="fa fa-file-text nav-icon"></i>
-              <p style="color: white;">Conduce input</p>
+              <p style="color: white;">Conduce de entrada</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'ConduceSalida' %}" class="nav-link">
               <i class="fa fa-file-text-o nav-icon"></i>
-              <p style="color: white;">Conduce output</p>
+              <p style="color: white;">Conduce de salida</p>
             </a>
           </li>
 
-          <li class="nav-header">Reports</li>
-          <span class="right badge badge-danger">To be determinate</span>
+          <li class="nav-header">Reportes
+            <p><span class="right badge badge-danger">To be determinate</span></p>
+          </li>
+          
 
 
 
