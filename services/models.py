@@ -21,5 +21,4 @@ class Ordenes_De_Servicio(models.Model):
     nomeclatura_ods = models.CharField(max_length=100)
     status = models.ForeignKey(status, on_delete=models.CASCADE)
     fecha_inicio = models.DateField()
-    tiempo_servicios = models.IntegerField()
 
