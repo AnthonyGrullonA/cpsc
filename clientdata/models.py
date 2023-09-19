@@ -5,6 +5,7 @@ from django.db import models
 class Industria(models.Model):
     id_industria = models.AutoField(primary_key=True)
     nombre_industria = models.CharField(max_length=100)
+    descripcion = models.CharField(max_length=200)
       
 class Cliente(models.Model):
     OPCIONES_STATUS_CLIENTE = (

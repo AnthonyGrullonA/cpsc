@@ -4,23 +4,20 @@
       <div class="modal-content">
         <form>
           <div class="modal-header">						
-            <h4 class="modal-title">Agregar orden de servicio</h4>
+            <h4 class="modal-title">Agregar industria</h4>
           </div>
+
           <div class="modal-body">					
             <div class="form-group">
-              <label>Nombre Cliente</label>
+              <label>Nombre</label>
               <input type="text" class="form-control" required>
             </div>
             <div class="form-group">
-              <label>Servicio Contratado</label>
-              <input type="text" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label>status</label>
-              <input type="text" class="form-control" required>
-              {% comment %} <textarea class="form-control" required></textarea> {% endcomment %}
-            </div>					
+              <label>Descripcion</label>
+              <textarea class="form-control" required></textarea>
+            </div>			
           </div>
+
           <div class="modal-footer">
             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
             <input type="submit" class="btn btn-success" value="Add">
@@ -32,42 +29,38 @@
   <!-- Edit Modal HTML -->
   <div id="editEmployeeModal" class="modal fade">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <form>
-          <div class="modal-header">						
-            <h4 class="modal-title">Editar Orden de servicio</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-          </div>
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">						
+              <h4 class="modal-title">Editar industria</h4>
+            </div>
+
           <div class="modal-body">					
             <div class="form-group">
-              <label>Nombre Cliente</label>
+              <label>Nombre</label>
               <input type="text" class="form-control" required>
             </div>
             <div class="form-group">
-              <label>Servicio Contratado</label>
-              <input type="text" class="form-control" required>
+              <label>Descripcion</label>
+              <textarea class="form-control" required></textarea>
+            </div>			
+          </div>
+  
+            <div class="modal-footer">
+              <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+              <input type="submit" class="btn btn-success" value="Add">
             </div>
-            <div class="form-group">
-              <label>status</label>
-              <input type="text" class="form-control" required>
-            </div>					
-          </div>				
-          </div>
-          <div class="modal-footer">
-            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-            <input type="submit" class="btn btn-info" value="Save">
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Delete Modal HTML -->
+      <!-- Delete Modal HTML -->
   <div id="deleteEmployeeModal" class="modal fade">
     <div class="modal-dialog">
       <div class="modal-content">
         <form>
           <div class="modal-header">						
-            <h4 class="modal-title">Eliminar orden</h4>
+            <h4 class="modal-title">Eliminar industria</h4>
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
           </div>
           <div class="modal-body">					

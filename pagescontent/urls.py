@@ -17,7 +17,6 @@ urlpatterns = [
     path('acl/', views.Acl_Permanent_View, name='ACL'),
     path('acl_temp/', views.Acl_Temporary_View, name='ACL_TEMP'),
     path('Clientes_R/', views.Restridted_Client_View, name='ClientesRestringidos'),
-    path('Calendario/', views.Calendar_view, name='Calendario'),
-    path('Task/', views.Task_List_View, name='TaskList'),
+
     
 ]
