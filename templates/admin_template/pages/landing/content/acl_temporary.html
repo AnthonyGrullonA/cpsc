@@ -1,34 +1,89 @@
+{% include 'admin_template/pages/landing/tables/table_header.html' %}
+
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>ACL Temporal</h1>
+  <div class="content">
+    <div class="table-responsive">
+
+      
+
+      <div class="table-wrapper">
+
+
+        <div class="cosmos-title">
+          <div class="row">
+              <div class="col">
+                  <h2>ACL temporal - COSMOS</h2>
+              </div>
+              <div class="col">
+                  <div class="input-group">
+                    <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search for names..">
+
+                      {% comment %} <input type="text" id="myInput onkeyup="myFunction()"  class="form-control" placeholder="Search..."> {% endcomment %}
+                  </div>
+              </div>
           </div>
-
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-
-      <!-- Default box -->
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Title</h3>
-        </div>
-        <div class="card-body">
-          Start creating your amazing application!
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
-          Footer
-        </div>
-        <!-- /.card-footer-->
       </div>
-      <!-- /.card -->
+      
 
-    </section>
-    <!-- /.content -->
+        <div class="table-container" style="max-height: 400px; overflow-y: auto;">
+          <table class="table table-striped table-hover" id="myTable">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cédula</th>
+                <th>Empresa</th>
+                <th>Email</th>
+                <th>Autorizador</th>
+                <th>Fecha Entrada</th>
+                <th>Fecha Salida</th>
+          </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alguien</td>
+                <td>Apellido Alguien</td> 
+                <td>402</td>
+                <td>NAP Del Caribe</td>
+                <td>algo@napdelcaribe.com.do</td>
+                <td>Jairol Grullon</td>
+                <td>X</td>
+                <td>x</td>
+              </tr>
+       
+            </tbody>
+          </table>
+  
+        </div>
+      </div>
+    </div>        
+  </div>
+
+  
+
+  {% include 'admin_template/pages/landing/tables/Modal_Tables/modal_industry.html' %}
+
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+    
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+    

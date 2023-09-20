@@ -51,6 +51,12 @@ def Acl_Temporary_View(request):
 def Restridted_Client_View(request):
     return render(request, 'pages/cosmos/restridted_client.html')
 
+def Formularios_ACL(request):
+    return render(request, 'pages/formularios/formularios_acl.html')
+
+
+def Formularios_Implementaciones(request):
+    return render(request, 'pages/formularios/formularios_implementaciones.html')
 
 def Calendar_view(request):
     return render(request, 'pages/time_c/calendar.html')

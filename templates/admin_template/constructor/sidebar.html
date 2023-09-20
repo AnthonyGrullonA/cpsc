@@ -1,125 +1,139 @@
 {% load static %}
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="{% url 'Dashboard' %}" class="brand-link">
-      <img src="{% static 'AdminLTE/img/naplogo.png' %}" class="brand-image img-square elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Service Center</span>
-    </a>
+  <!-- Brand Logo -->
+  <a href="{% url 'Dashboard' %}" class="brand-link">
+    <img src="{% static 'AdminLTE/img/naplogo.png' %}" class="brand-image img-square elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">Service Center</span>
+  </a>
 
 
-    <div class="sidebar">
+  <div class="sidebar">
 
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-          {% comment %} <li class="nav-item">
-            <a href="{% url 'Dashboard' %}" class="nav-link">
-              <i class="nav-icon fa fa-tachometer"></i>
-                <p style="color: white;">Panel de control</p>
-                <span class="right badge badge-danger">New</span>
-            </a>
-          </li> {% endcomment %}
-{% comment %} 
-          </li>
-          <li class="nav-header">Control de tiempo</li>
+        {% comment %} <li class="nav-item">
+          <a href="{% url 'Dashboard' %}" class="nav-link">
+            <i class="nav-icon fa fa-tachometer"></i>
+            <p style="color: white;">Panel de control</p>
+            <span class="right badge badge-danger">New</span>
+          </a>
+        </li> {% endcomment %}
+        {% comment %}
+        </li>
+        <li class="nav-header">Control de tiempo</li>
 
-          <li class="nav-item">
-            <a href="{% url 'Calendario' %}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p style="color: white;">Calendario</p>
-            </a>
-          </li>
+        <li class="nav-item">
+          <a href="{% url 'Calendario' %}" class="nav-link">
+            <i class="nav-icon far fa-calendar-alt"></i>
+            <p style="color: white;">Calendario</p>
+          </a>
+        </li>
 
-          <li class="nav-item">
-            <a href="{% url 'TaskList' %}" class="nav-link">
-              <i class="nav-icon fas fa-columns"></i>
-              <p style="color: white;">Lista de tareas</p>
-            </a>
-          </li> {% endcomment %}
-
- 
-          <li class="nav-header">Control de clientes</li>
-
-          <li class="nav-item">
-            <a href="{% url 'ClientContact' %}" class="nav-link">
-              <i class="nav-icon fa fa-address-book"></i>
-              <p style="color: white;">Contacto de clientes</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{% url 'ClientList' %}" class="nav-link">
-              <i class="nav-icon fa fa-university"></i>
-              <p style="color: white;">Listado de clientes</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{% url 'ServiceOrder' %}" class="nav-link">
-              <i class="nav-icon fa fa-magic"></i>
-              <p style="color: white;">Orden de servicios</p>
-            </a>
-          </li>
-
-          <li class="nav-header">Banco de informacion</li>
-
-          <li class="nav-item">
-            <a href="{% url 'Industry' %}" class="nav-link">
-              <i class="fa fa-industry nav-icon"></i>
-              <p style="color: white;">Industria</p>
-            </a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a href="{% url 'Services' %}" class="nav-link">
-              <i class="fa fa-hdd-o nav-icon"></i>
-              <p style="color: white;">Servicios</p>
-            </a>
-          </li>
-
-          <li class="nav-header">ACL - NAP Cosmos</li>
-      
-          <li class="nav-item">
-            <a href="{% url 'ACL' %}" class="nav-link">
-              <i class="fa fa-eye nav-icon"></i>
-              <p style="color: white;">ACL Permanente</p>
-            </a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a href="{% url 'ACL_TEMP' %}" class="nav-link">
-              <i class="fa fa-eye-slash nav-icon"></i>
-              <p style="color: white;">ACL Temporal</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{% url 'ClientesRestringidos' %}" class="nav-link">
-              <i class="fa fa-exclamation-triangle nav-icon"></i>
-              <p style="color: white;">Clientes restringidos</p>
-            </a>
-          </li>
-
-          <li class="nav-header">Conduces</li>
-
-          <li class="nav-item">
-            <a href="{% url 'ConduceEntrada' %}" class="nav-link">
-              <i class="fa fa-file-text nav-icon"></i>
-              <p style="color: white;">Conduce de entrada</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{% url 'ConduceSalida' %}" class="nav-link">
-              <i class="fa fa-file-text-o nav-icon"></i>
-              <p style="color: white;">Conduce de salida</p>
-            </a>
-          </li>
-
-          <li class="nav-header">Reportes
-            <p><span class="right badge badge-danger">To be determinate</span></p>
-          </li>
-          
+        <li class="nav-item">
+          <a href="{% url 'TaskList' %}" class="nav-link">
+            <i class="nav-icon fas fa-columns"></i>
+            <p style="color: white;">Lista de tareas</p>
+          </a>
+        </li> {% endcomment %}
 
 
+        <li class="nav-header">Control de clientes</li>
 
-        </ul>
-      </nav>
-    </div>
-  </aside>
+        <li class="nav-item">
+          <a href="{% url 'ClientContact' %}" class="nav-link">
+            <i class="nav-icon fa fa-address-book"></i>
+            <p style="color: white;">Contacto de clientes</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'ClientList' %}" class="nav-link">
+            <i class="nav-icon fa fa-university"></i>
+            <p style="color: white;">Listado de clientes</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'ServiceOrder' %}" class="nav-link">
+            <i class="nav-icon fa fa-magic"></i>
+            <p style="color: white;">Orden de servicios</p>
+          </a>
+        </li>
+
+        <li class="nav-header">Banco de informacion</li>
+
+        <li class="nav-item">
+          <a href="{% url 'Industry' %}" class="nav-link">
+            <i class="fa fa-industry nav-icon"></i>
+            <p style="color: white;">Industria</p>
+          </a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'Services' %}" class="nav-link">
+            <i class="fa fa-hdd-o nav-icon"></i>
+            <p style="color: white;">Servicios</p>
+          </a>
+        </li>
+
+
+        <li class="nav-header">Formularios
+          <p><span class="right badge badge-danger">To be determinate</span></p>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'FormACL' %}" class="nav-link">
+            <i class="fa fa-eye nav-icon"></i>
+            <p style="color: white;">ACL</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{% url 'ConduceEntrada' %}" class="nav-link">
+            <i class="fa fa-file-text nav-icon"></i>
+            <p style="color: white;">Conduce de entrada</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'ConduceSalida' %}" class="nav-link">
+            <i class="fa fa-file-text-o nav-icon"></i>
+            <p style="color: white;">Conduce de salida</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'Implementaciones' %}" class="nav-link">
+            <i class="fa fa-sellsy nav-icon"></i>
+            <p style="color: white;">Implementaciones</p>
+          </a>
+        </li>
+        <li class="nav-header">ACL - NAP Cosmos - NOC APP</li>
+
+        <li class="nav-item">
+          <a href="{% url 'ACL' %}" class="nav-link">
+            <i class="fa fa-eye nav-icon"></i>
+            <p style="color: white;">ACL Permanente</p>
+          </a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'ACL_TEMP' %}" class="nav-link">
+            <i class="fa fa-eye-slash nav-icon"></i>
+            <p style="color: white;">ACL Temporal</p>
+          </a>
+        </li>
+
+
+
+
+        {% comment %}
+        <li class="nav-header">Reportes - Documentos</li>
+
+        <li class="nav-header">Reportes
+          <p><span class="right badge badge-danger">To be determinate</span></p>
+        </li>
+
+        {% endcomment %}
+
+
+      </ul>
+    </nav>
+  </div>
+</aside>
