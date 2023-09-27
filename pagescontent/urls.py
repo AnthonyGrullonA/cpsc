@@ -1,9 +1,10 @@
 from django.urls import path
 from . import views
+from django.urls import include
 
 urlpatterns = [
 #Prueba de plantillas AdminLTE (Despues cambiar nombre de funciones)   
-    path('DashboardV/', views.adminvacio, name='PRUEBA 2'),
+    path('', views.Home, name="Home"),
 ###########################################################################
     path('', views.Home, name="Home"),
     path('Dashboard/', views.Admin_Page_Service_Center, name="Dashboard"),

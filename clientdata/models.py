@@ -6,29 +6,33 @@ class Industria(models.Model):
     id_industria = models.AutoField(primary_key=True)
     nombre_industria = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=200)
+    
+    
+class Status(models.Model):
+    id_status = models.AutoField(primary_key=True)
+    status = models.CharField(max_length=100)
+    descripcion = models.CharField(max_length=255)
       
+      
+class Operacion(models.Model):
+    id_operacion = models.AutoField(primary_key=True)
+    operacion = models.CharField(max_length=100)
+    descripcion = models.CharField(max_length=255)
+
+
+class Entidad(models.Model):
+    id_entidad = models.AutoField(primary_key=True)
+    entidad = models.CharField(max_length=100)
+    descripcion = models.CharField(max_length=255)
+    
+
+class Localidad(models.Model):
+    id_localidad = models.AutoField(primary_key=True)
+    localidad = models.CharField(max_length=100)
+    descripcion = models.CharField(max_length=255)
+    
+    
 class Cliente(models.Model):
-    OPCIONES_STATUS_CLIENTE = (
-        ('activo', 'Cliente Activo'),
-        ('inactivo', 'Cliente Inactivo'),
-    )
-    
-    OPCIONES_TIPO_OPERACION = (
-        ('contingencia', 'Contingencia'),
-        ('primario', 'Primario'),
-    )
-    
-    OPCIONES_TIPO_ENTIDAD = (
-        ('publico', 'Público'),
-        ('privado', 'Privado'),
-    )
-    
-    OPTCIONES_LOCALIDAD = (
-        ('NAP West', 'NAP West'),
-        ('NAP East', 'NAP East'),
-        ('NAP Cloud', 'NAP Cloud'),
-        ('N/A', 'N/A'),
-    )
 
     id_cliente = models.AutoField(primary_key=True)
     nomeclatura = models.CharField(max_length=200)
@@ -36,11 +40,11 @@ class Cliente(models.Model):
     fecha_inicio_contrato = models.DateField()
     direccion = models.CharField(max_length=200)
     rnc = models.CharField(max_length=30)
-    status_cliente = models.CharField(max_length=20, choices=OPCIONES_STATUS_CLIENTE)
-    tipo_operacion = models.CharField(max_length=20, choices=OPCIONES_TIPO_OPERACION)
-    tipo_entidad = models.CharField(max_length=20, choices=OPCIONES_TIPO_ENTIDAD)
+    status_cliente = models.ForeignKey(Status, on_delete=models.CASCADE)
+    tipo_operacion = models.ForeignKey(Operacion, on_delete=models.CASCADE)
+    tipo_entidad = models.ForeignKey(Entidad, on_delete=models.CASCADE)
     industria = models.ForeignKey(Industria, on_delete=models.CASCADE)
-    site = models.CharField(max_length=20,choices=OPTCIONES_LOCALIDAD, default='')
+    site = models.ForeignKey(Localidad, on_delete=models.CASCADE)
  
 class Contacto(models.Model):
     id_contacto = models.AutoField(primary_key=True)

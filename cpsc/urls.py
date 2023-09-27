@@ -16,13 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from pagescontent import views as pc
+from django.conf.urls import handler404
+
+handler404 = 'pagescontent.views.custom_page_not_found'
 
 urlpatterns = [
     path('napadm/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),
-    
+        
     #URLS pagescontent
     path('', include('pagescontent.urls')),
     # . . .
+    
+    #APP Accoutns URLS
+    path('', include('authentication.urls'))
+    # . . .
+
 ]

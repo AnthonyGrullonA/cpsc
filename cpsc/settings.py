@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0y=96bm1v3t)++inso7arp(5-3dgwozytp%a+qp@1pxj(^y@+g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -39,12 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'authentication',
     'conduces',
     'cosmos',
     'services',
     'support',
     'clientdata',
-    'pagescontent'
+    'pagescontent',
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'cpsc.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -133,21 +133,26 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
+# Configuración de archivos estáticos en Django
 
+# Directorio base de tu proyecto
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# URL base para los archivos estáticos
 STATIC_URL = '/static/'
 
+# Rutas a los directorios de archivos estáticos
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static'),  # Directorio de archivos estáticos personalizados
 ]
 
-# Configura la ubicación para los archivos estáticos recopilados
+# Ruta para los archivos estáticos recopilados (para producción)
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'authentication.CustomUser'
+handler404 = 'pagescontent.views.custom_page_not_found'
