@@ -32,17 +32,9 @@
           <table class="table table-striped table-hover" id="myTable">
             <thead>
               <tr>
-                {% comment %} <th>
-                    <span class="custom-checkbox">
-                    <input type="checkbox" id="selectAll"> 
-                    <label for="selectAll"></label>
-                  </span>
-                </th> {% endcomment %}
                 <th>#</th>
                 <th>Cliente</th>
                 <th>Fecha de inicio de contrato</th>
-                <th>Direccion</th>
-                <th>RNC</th>
                 <th>Status</th>
                 <th>Tipo de operacion</th>
                 <th>Sector</th>
@@ -52,22 +44,28 @@
               </tr>
             </thead>
             <tbody>
+              {% for c in clientes %}
               <tr>
-                <td>1</td>
-                <td>Nap Del Caribe</td> 
-                <td>Fecha</td>
-                <td>Aplica?</td>
-                <td>Aplica?</td>
-                <th>Activo</th>
-                <th>Primario</th>
-                <th>Privado</th>
-                <th>IT</th>
-                <th>Colo</th>
+                <td>{{ c.id_cliente }}</td>
+                <td>{{ c.nombre_empresa }}</td> 
+                <td>{{ c.fecha_inicio_contrato }}</td>
+                <td>{{ c.status_cliente }}</td>
+                <td>{{ c.tipo_operacion }}</td>
+                <td>{{ c.tipo_entidad }}</td>
+                <td>{{ c.industria }}</td>
+                <td>{{ c.site }}</td>
+                {% if clientes %}
                 <td>
                   <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa fa-pencil" data-toggle="tooltip" title="Edit"></i></a>
                 </td>
+                {% endif %}
               </tr>
-       
+              {% empty %}
+              <tr>
+                <td colspan="8">No hay clientes disponibles.</td>
+              </tr>
+               {% endfor %}
+
             </tbody>
           </table>
   

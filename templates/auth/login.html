@@ -5,7 +5,7 @@
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="{% static 'login/images/img-03.png' %}" alt="IMG">
 				</div>
-
+				
 				<form class="login100-form validate-form" method="post">
 					{% csrf_token %}
 					<span class="login100-form-title">
@@ -32,10 +32,18 @@
 						<button class="login100-form-btn" type="submit">
 							Login
 						</button>
+						<div class="text-center" style="font-size: small; color: #ff0000;">
+							{% if messages %}
+								{% for message in messages %}
+								{{ message }}
+								{% endfor %}
+							{% endif %}
+							</div>
 					</div>
-					<div class="text-center p-t-136" style="font-size: small; color: #4D0000;">
+
+					<div class="text-center p-t-100" style="font-size: small; color: #4D0000;">
 						Service Center - NAP Del Caribe
-				</div>
+					</div>
 				</form>
 			
 				
@@ -43,5 +51,3 @@
 		</div>
 	</div>
 	
-	
-

@@ -12,32 +12,6 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-        {% comment %} <li class="nav-item">
-          <a href="{% url 'Dashboard' %}" class="nav-link">
-            <i class="nav-icon fa fa-tachometer"></i>
-            <p style="color: white;">Panel de control</p>
-            <span class="right badge badge-danger">New</span>
-          </a>
-        </li> {% endcomment %}
-        {% comment %}
-        </li>
-        <li class="nav-header">Control de tiempo</li>
-
-        <li class="nav-item">
-          <a href="{% url 'Calendario' %}" class="nav-link">
-            <i class="nav-icon far fa-calendar-alt"></i>
-            <p style="color: white;">Calendario</p>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="{% url 'TaskList' %}" class="nav-link">
-            <i class="nav-icon fas fa-columns"></i>
-            <p style="color: white;">Lista de tareas</p>
-          </a>
-        </li> {% endcomment %}
-
-
         <li class="nav-header">Control de clientes</li>
 
         <li class="nav-item">
@@ -59,26 +33,7 @@
           </a>
         </li>
 
-        <li class="nav-header">Banco de informacion</li>
-
-        <li class="nav-item">
-          <a href="{% url 'Industry' %}" class="nav-link">
-            <i class="fa fa-industry nav-icon"></i>
-            <p style="color: white;">Industria</p>
-          </a>
-        </li>
-        </li>
-        <li class="nav-item">
-          <a href="{% url 'Services' %}" class="nav-link">
-            <i class="fa fa-hdd-o nav-icon"></i>
-            <p style="color: white;">Servicios</p>
-          </a>
-        </li>
-
-
-        <li class="nav-header">Formularios
-          <p><span class="right badge badge-danger">To be determinate</span></p>
-        </li>
+        <li class="nav-header">Formularios</li>
         <li class="nav-item">
           <a href="{% url 'FormACL' %}" class="nav-link">
             <i class="fa fa-eye nav-icon"></i>
@@ -104,34 +59,14 @@
             <p style="color: white;">Implementaciones</p>
           </a>
         </li>
-        <li class="nav-header">ACL - NAP Cosmos - NOC APP</li>
 
+        <li class="nav-header">Avanzado</li>
         <li class="nav-item">
-          <a href="{% url 'ACL' %}" class="nav-link">
-            <i class="fa fa-eye nav-icon"></i>
-            <p style="color: white;">ACL Permanente</p>
-          </a>
+          <a href="{% url 'admin:index' %}" class="nav-link">
+            <i class="fa fa-cog nav-icon"></i>
+            <p style="color:white;">Configuraciones</p>
+          </a>          
         </li>
-        </li>
-        <li class="nav-item">
-          <a href="{% url 'ACL_TEMP' %}" class="nav-link">
-            <i class="fa fa-eye-slash nav-icon"></i>
-            <p style="color: white;">ACL Temporal</p>
-          </a>
-        </li>
-
-
-
-
-        {% comment %}
-        <li class="nav-header">Reportes - Documentos</li>
-
-        <li class="nav-header">Reportes
-          <p><span class="right badge badge-danger">To be determinate</span></p>
-        </li>
-
-        {% endcomment %}
-
 
       </ul>
     </nav>

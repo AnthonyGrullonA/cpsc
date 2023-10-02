@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0y=96bm1v3t)++inso7arp(5-3dgwozytp%a+qp@1pxj(^y@+g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -156,3 +156,73 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'authentication.CustomUser'
 handler404 = 'pagescontent.views.custom_page_not_found'
+# handler500 = 'pagescontent.views.custom_page_server_error'
+
+TIME_ZONE = 'America/Santo_Domingo'
+
+JAZZMIN_SETTINGS = {
+    'site_title': 'Customer Portal',
+    'site_brand': 'Customer Portal',
+    'site_header': 'Customer Portal',
+    'copyright': 'NAP Del Caribe',
+    'welcome_sign': 'Bienvenidos',
+    'site_logo': 'img/favicon.ico',
+    "related_modal_active": True,
+    'branding': False,
+    "changeform_format": "carousel",
+    "changeform_format_overrides": {
+        "auth.user": "single",
+        "auth.group": "vertical_tabs"
+    },
+    #formato de iconos
+    # 'icons':{
+    #     'app.modelo':'icono',
+    # }
+    
+    #Agregar elementos al topmenu
+    # 'topmenu_links':[
+    #     {'app':'aplicacion'}
+    #     {'model':'modelo'}
+    # ]
+}
+
+# JAZZMIN_SETTINGS["show_ui_builder"] = True
+
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": True,
+    "footer_small_text": True,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "brand_colour": False,
+    "accent": "accent-danger",
+    "navbar": "navbar-white navbar-light",
+    "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-danger",
+    "sidebar_nav_small_text": True,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": False,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": False,
+    "theme": "default",
+    "dark_mode_theme": None,
+    "button_classes": {
+        "primary": "btn-primary",
+        "secondary": "btn-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    }
+}
+
+# settings.py
+DEBUG = False
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+DEBUG = True

@@ -21,14 +21,29 @@ from django.conf.urls import handler404
 handler404 = 'pagescontent.views.custom_page_not_found'
 
 urlpatterns = [
-    path('napadm/', admin.site.urls),
+    path('admin/', admin.site.urls),
         
     #URLS pagescontent
     path('', include('pagescontent.urls')),
     # . . .
     
     #APP Accoutns URLS
-    path('', include('authentication.urls'))
+    path('', include('authentication.urls')),
     # . . .
 
+    #APP ClientData
+    path('', include('clientdata.urls')),
+     # . . .
+
+    #APP Services
+    path('', include('services.urls')),
+    # . . .
+    
+    #APP Conduces
+    path('', include('conduces.urls')),
+    # . . .
+    
+    #APP Cosmos
+    path('', include('cosmos.urls')),
 ]
+
