@@ -7,7 +7,7 @@ urlpatterns = [
 ###########################################################################
     path('Dashboard/', views.Admin_Page_Service_Center, name="Dashboard"),
     path('Implementaciones/', views.Formularios_Implementaciones, name='Implementaciones'),
-    
+
 ]
 
 

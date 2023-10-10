@@ -46,11 +46,13 @@ INSTALLED_APPS = [
     'support',
     'clientdata',
     'pagescontent',
+    'AdminSite'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -101,7 +103,6 @@ DATABASES = {
 }
 
 DATABASE_ROUTERS = ['cosmos.routers.CosmosRouter',]
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -124,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ES'
 
 TIME_ZONE = 'UTC'
 
@@ -152,6 +153,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+SESSION_COOKIE_AGE = 60
+SESSION_TIMEOUT_REDIRECT = '/'
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'authentication.CustomUser'
@@ -184,11 +189,23 @@ JAZZMIN_SETTINGS = {
     #     {'app':'aplicacion'}
     #     {'model':'modelo'}
     # ]
+    "topmenu_links": [
+
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Inicio",  "url": "/Dashboard/", "permissions": ["auth.view_user"]},
+
+    ],
+      
+    # "usermenu_links": [
+    #     {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+    #     {"model": "auth.user"}
+    # ],
 }
 
 # JAZZMIN_SETTINGS["show_ui_builder"] = True
 
 JAZZMIN_UI_TWEAKS = {
+    
     "navbar_small_text": True,
     "footer_small_text": True,
     "body_small_text": False,
@@ -217,7 +234,9 @@ JAZZMIN_UI_TWEAKS = {
         "warning": "btn-warning",
         "danger": "btn-danger",
         "success": "btn-success"
-    }
+    },
+      
+
 }
 
 # settings.py

@@ -48,18 +48,28 @@
               </tr>
             </thead>
             <tbody>
+              
+              {% for c in order %}
               <tr>
-                <td>1</td>
-                <td>Nap Del Caribe</td> 
-                <td>Colo</td>
-                <td>Nom-Ecla-Tura</td>
-                <td>Activo</td>
-                <td>Fecha</td>
+                <td>{{ c.id_ods }}</td>
+                <td>{{ c.clientes }}</td> 
+                <td>{{ c.servicio_contratado }}</td>
+                <td>{{ c.nomeclatura_ods }}</td>
+                <td>{{ c.status }}</td>
+                <td>{{ c.fecha_inicio }}</td>
+                
+                {% if order %}
                 <td>
-                  <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa fa-pencil" data-toggle="tooltip" title="Edit"></i></a>
                   <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa fa-trash-o" data-toggle="tooltip" title="Delete"></i></a>
                 </td>
+                {% endif %}
               </tr>
+              {% empty %}
+              <tr>
+                <td colspan="8">No hay clientes disponibles.</td>
+              </tr>
+              {% endfor %}
+                
        
             </tbody>
           </table>

@@ -29,13 +29,12 @@ def custom_page_server_error(request, exception):
 def Admin_Page_Service_Center(request):
     return render(request, 'admin_template/index.html')
 
-######################################################################################################################################################
+##################################################################################
 
 
 @login_required
 def Formularios_Implementaciones(request):
     return render(request, 'pages/formularios/formularios_implementaciones.html')
-
 
 
 

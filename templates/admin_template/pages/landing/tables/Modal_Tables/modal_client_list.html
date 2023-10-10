@@ -3,10 +3,10 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <form method="POST" action="/registrarCliente/"> {% csrf_token %}
-          <div class="modal-header">						
+          <div class="modal-header">
             <h4 class="modal-title">Agregar cliente</h4>
           </div>
-          <div class="modal-body">					
+          <div class="modal-body">
             <div class="form-group">
               <label>Nombre Cliente (Empresa)</label>
               <input type="text" class="form-control" id="txtNombreC" name="txtNombreC" required>
@@ -15,6 +15,7 @@
             <div class="form-group">
               <label>Estado</label>
               <select id="OptionStatus" name="OptionStatus" class="form-control" required>
+                <option value="">...</option>
                 {% for a in estado %}
 
                 <option>{{ a.status }}</option>
@@ -30,15 +31,16 @@
             <div class="form-group">
               <label>RNC</label>
               <input type="text" class="form-control" id="txtRNC" name="txtRNC" required>
-            </div>	
+            </div>
             <div class="form-group">
               <label>Direccion</label>
               <textarea class="form-control" id="txtFIELDDirection" name="txtFIELDDirection" required></textarea>
             </div>
-     
+
             <div class="form-group">
               <label>Tipo de operacion</label>
               <select id="OptionOperation" name="OptionOperation" class="form-control" required>
+                <option value="">...</option>
                 {% for b in operation %}
 
                 <option>{{ b.operacion }}</option>
@@ -50,6 +52,7 @@
             <div class="form-group">
               <label>Sector</label>
               <select id="OptionSector" name="OptionSector" class="form-control" required>
+                <option value="">...</option>
                 {% for x in entidad %}
 
                 <option>{{ x.entidad }}</option>
@@ -61,6 +64,7 @@
             <div class="form-group">
               <label>Industria</label>
               <select id="OptionIndustry" name="OptionIndustry" class="form-control" required>
+                <option value="">...</option>
                 {% for c in industria %}
 
                 <option>{{ c.nombre_industria }}</option>
@@ -68,12 +72,12 @@
                 {% endfor %}
               </select>
             </div>
-            
+
             <div class="form-group">
               <label>Localidad</label>
               <select id="OptionSite" name="OptionSite" class="form-control" required>
+                <option value="">...</option>
                 {% for c in site %}
-
                 <option>{{ c.localidad }}</option>
 
                 {% endfor %}
@@ -90,41 +94,5 @@
       </div>
     </div>
   </div>
-  <!-- Edit Modal HTML -->
-    <div id="editEmployeeModal" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <form>
-            <div class="modal-header">						
-              <h4 class="modal-title">Editar Cliente</h4>
-            </div>
-            <div class="modal-body">					
-              <div class="form-group">
-                <label>Estado</label>
-                <input type="text" class="form-control" required>
-              </div>
-              <div class="form-group">
-                <label>Direccion</label>
-                <textarea class="form-control" required></textarea>
-              </div>
-              <div class="form-group">
-                <label>Tipo de operacion</label>
-                <input type="text" class="form-control" required>
-              </div>	
-              <div class="form-group">
-                <label>Sector</label>
-                <input type="text" class="form-control" required>
-              </div>	
-              <div class="form-group">
-                <label>Industria</label>
-                <input type="text" class="form-control" required>
-              </div>							
-            </div>
-            <div class="modal-footer">
-              <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-              <input type="submit" class="btn btn-success" value="Add">
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+
+  
