@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-#En este modelo podran definirse los sectores.
+
 class Industria(models.Model):
     id_industria = models.AutoField(primary_key=True)
     fecha_registro = models.DateField(auto_now_add=True)

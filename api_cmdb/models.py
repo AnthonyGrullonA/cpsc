@@ -1,5 +1,5 @@
 from django.db import models
-
+from clientdata import models as cd
 # Create your models here.
 
 class Status_Implementaciones(models.Model):
@@ -12,11 +12,11 @@ class Status_Implementaciones(models.Model):
 
 class Implementaciones(models.Model):
     id_implementacion = models.AutoField(primary_key=True)
-    nomeclatura = models.CharField(max_length=50, blank=True)  # Puedes permitir que sea nulo o en blanco
+    nomeclatura = models.CharField(max_length=50, blank=True, default="")
     titulo = models.CharField(max_length=50)
     detalle = models.CharField(max_length=200)
     status_interno = models.ForeignKey(Status_Implementaciones, on_delete=models.PROTECT)
-    
+    cliente = models.ForeignKey(cd.Cliente, on_delete=models.PROTECT)
         
     def __str__(self):
         return self.nomeclatura

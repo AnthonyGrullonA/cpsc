@@ -161,9 +161,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-# AUTH_USER_MODEL = 'authentication.CustomUser'
 handler404 = 'pagescontent.views.custom_page_not_found'
-# handler500 = 'pagescontent.views.custom_page_server_error'
 
 TIME_ZONE = 'America/Santo_Domingo'
 
@@ -181,30 +179,15 @@ JAZZMIN_SETTINGS = {
         "auth.user": "single",
         "auth.group": "vertical_tabs"
     },
-    #formato de iconos
-    # 'icons':{
-    #     'app.modelo':'icono',
-    # }
-    
-    #Agregar elementos al topmenu
-    # 'topmenu_links':[
-    #     {'app':'aplicacion'}
-    #     {'model':'modelo'}
-    # ]
+
     "topmenu_links": [
 
-        # Url that gets reversed (Permissions can be added)
         {"name": "Inicio",  "url": "/Dashboard/", "permissions": ["auth.view_user"]},
 
     ],
       
-    # "usermenu_links": [
-    #     {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
-    #     {"model": "auth.user"}
-    # ],
 }
 
-# JAZZMIN_SETTINGS["show_ui_builder"] = True
 
 JAZZMIN_UI_TWEAKS = {
     
@@ -241,8 +224,6 @@ JAZZMIN_UI_TWEAKS = {
 
 }
 
-# settings.py
-DEBUG = False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True

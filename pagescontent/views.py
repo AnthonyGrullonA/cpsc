@@ -15,7 +15,7 @@ def login_view(request):
         if user is not None:
             login(request, user)
             print("Usuario autenticado correctamente")
-            return redirect('Dashboard')  # Cambia 'dashboard' por la URL a la que deseas redirigir después del inicio de sesión
+            return redirect('Dashboard')  
         else:
             messages.error(request, 'Credenciales inválidas. Por favor, inténtalo de nuevo.')
             print("Error de autenticación")
@@ -30,7 +30,7 @@ def login_view2(request):
         if user is not None:
             login(request, user)
             print("Usuario autenticado correctamente")
-            return redirect('Dashboard')  # Cambia 'dashboard' por la URL a la que deseas redirigir después del inicio de sesión
+            return redirect('Dashboard') 
         else:
             messages.error(request, 'Credenciales inválidas. Por favor, inténtalo de nuevo.')
             print("Error de autenticación")
@@ -72,13 +72,3 @@ def Admin_Page_Service_Center(request):
 def logout_view(request):
     logout(request)
     return redirect('Home')
-
-##################################################################################
-
-
-@login_required
-def Formularios_Implementaciones(request):
-    return render(request, 'pages/formularios/formularios_implementaciones.html')
-
-
-
