@@ -30,8 +30,7 @@ def Client_List_View(request):
                                                                     "operation": Operation,
                                                                     "industria": Industry,
                                                                     "site": Site})
-
-
+ 
 
 @login_required
 def RegistrarClientes(request):
@@ -102,7 +101,6 @@ def RegistrarContactos(request):
         )
 
     return redirect('ClientContact')
-
 
 @login_required
 def EliminarCliente(request, id_cliente):

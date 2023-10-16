@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0y=96bm1v3t)++inso7arp(5-3dgwozytp%a+qp@1pxj(^y@+g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -39,14 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'authentication',
     'conduces',
     'cosmos',
     'services',
-    'support',
     'clientdata',
     'pagescontent',
-    'AdminSite'
+    'acl',
+    'api_cmdb'
 ]
 
 MIDDLEWARE = [
@@ -153,13 +152,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-SESSION_COOKIE_AGE = 60
+SESSION_COOKIE_AGE = 600
 SESSION_TIMEOUT_REDIRECT = '/'
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL = 'authentication.CustomUser'
+# AUTH_USER_MODEL = 'authentication.CustomUser'
 handler404 = 'pagescontent.views.custom_page_not_found'
 # handler500 = 'pagescontent.views.custom_page_server_error'
 

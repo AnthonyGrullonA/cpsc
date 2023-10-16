@@ -27,10 +27,6 @@ urlpatterns = [
     path('', include('pagescontent.urls')),
     # . . .
     
-    #APP Accoutns URLS
-    path('', include('authentication.urls')),
-    # . . .
-
     #APP ClientData
     path('', include('clientdata.urls')),
      # . . .
@@ -43,7 +39,13 @@ urlpatterns = [
     path('', include('conduces.urls')),
     # . . .
     
-    #APP Cosmos
-    path('', include('cosmos.urls')),
+    #APP ACL
+    path('', include('acl.urls')),
+    # . . .
+
+    #CMDB
+    path('', include('api_cmdb.urls'))
+    # . . .
+
 ]
 

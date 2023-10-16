@@ -60,13 +60,15 @@
                 
                 {% if order %}
                 <td>
-                  <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa fa-trash-o" data-toggle="tooltip" title="Delete"></i></a>
-                </td>
+                  <a href="{% url 'eliminar_orden' id_ods=c.id_ods %}" class="delete"
+                    onclick="return confirm('¿Está seguro de que desea eliminar al contacto {{ c.nombre_contacto }}? Esta acción no se puede deshacer.');">
+                    <i class="fa fa-trash-o" data-toggle="tooltip" title="Delete"></i>
+                  </a>                </td>
                 {% endif %}
               </tr>
               {% empty %}
               <tr>
-                <td colspan="8">No hay clientes disponibles.</td>
+                <td colspan="8">No hay ordenes disponibles.</td>
               </tr>
               {% endfor %}
                 

@@ -1,3 +1,4 @@
+{% load static %}
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -8,27 +9,34 @@
           </div>
 
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-
-      <!-- Default box -->
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Title</h3>
-        </div>
-        <div class="card-body">
-          Start creating your amazing application!
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
-          Footer
-        </div>
-        <!-- /.card-footer-->
       </div>
-      <!-- /.card -->
-
     </section>
-    <!-- /.content -->
+
+    <div class="container d-flex align-items-center">
+      <div class="row">
+
+        <div class="card text-center" style="width: 18rem; margin: 10px;">
+          <img src="{% static 'img/permanente.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="/acl_permanente/" class="btn btn-success">Operar</a>
+          </div>
+        </div>
+  
+        <div class="card text-center" style="width: 18rem; margin: 10px">
+          <img src="{% static 'img/temporales.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="/acl_temporal/" class="btn btn-primary">Operar</a>
+          </div>
+        </div>
+  
+        <div class="card text-center" style="width: 18rem; margin: 10px">
+          <img src="{% static 'img/restringidos.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="/acl_restringido/" class="btn btn-danger">Operar</a>
+          </div>
+        </div>
+
+  
+      </div>
+    </div>
+

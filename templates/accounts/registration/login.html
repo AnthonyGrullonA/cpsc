@@ -26,10 +26,10 @@
       <form method="post">
         {% csrf_token %}
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
+          <input class="form-control" type="text" name="username" placeholder="Username" id="username" required>
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+              <span class="fa fa-user"></span>
             </div>
           </div>
         </div>

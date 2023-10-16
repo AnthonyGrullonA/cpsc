@@ -3,11 +3,12 @@ from . import views
 
 urlpatterns = [
 #Prueba de plantillas AdminLTE (Despues cambiar nombre de funciones)   
-    path('', views.Home, name="Home"),
+    path('', views.login_view, name="Home"),
+    path('logout/', views.logout_view, name='logout'),
+    path('accounts/login/', views.login_view2, name='login'),
 ###########################################################################
     path('Dashboard/', views.Admin_Page_Service_Center, name="Dashboard"),
-    path('Implementaciones/', views.Formularios_Implementaciones, name='Implementaciones'),
-
+    
 ]
 
 

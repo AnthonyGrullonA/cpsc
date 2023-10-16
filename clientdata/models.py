@@ -4,8 +4,8 @@ from django.db import models
 #En este modelo podran definirse los sectores.
 class Industria(models.Model):
     id_industria = models.AutoField(primary_key=True)
+    fecha_registro = models.DateField(auto_now_add=True)
     nombre_industria = models.CharField(max_length=100)
-    descripcion = models.CharField(max_length=200)
     
     def __str__(self):
         return self.nombre_industria
@@ -13,8 +13,8 @@ class Industria(models.Model):
     
 class Status(models.Model):
     id_status = models.AutoField(primary_key=True)
+    fecha_registro = models.DateField(auto_now_add=True)
     status = models.CharField(max_length=100)
-    descripcion = models.CharField(max_length=255)
     
     def __str__(self):
         return self.status
@@ -22,8 +22,8 @@ class Status(models.Model):
       
 class Operacion(models.Model):
     id_operacion = models.AutoField(primary_key=True)
+    fecha_registro = models.DateField(auto_now_add=True)
     operacion = models.CharField(max_length=100)
-    descripcion = models.CharField(max_length=255)
     
     def __str__(self):
         return self.operacion
@@ -31,8 +31,8 @@ class Operacion(models.Model):
 
 class Entidad(models.Model):
     id_entidad = models.AutoField(primary_key=True)
+    fecha_registro = models.DateField(auto_now_add=True)
     entidad = models.CharField(max_length=100)
-    descripcion = models.CharField(max_length=255)
     
     def __str__(self):
         return self.entidad
@@ -40,8 +40,8 @@ class Entidad(models.Model):
 
 class Localidad(models.Model):
     id_localidad = models.AutoField(primary_key=True)
+    fecha_registro = models.DateField(auto_now_add=True)
     localidad = models.CharField(max_length=100)
-    descripcion = models.CharField(max_length=255)
     
     def __str__(self):
         return self.localidad
@@ -49,6 +49,7 @@ class Localidad(models.Model):
 class Cliente(models.Model):
 
     id_cliente = models.AutoField(primary_key=True)
+    fecha_registro = models.DateField(auto_now_add=True)
     nomeclatura = models.CharField(max_length=200, default='')
     nombre_empresa = models.CharField(max_length=200)
     fecha_inicio_contrato = models.DateField()
@@ -66,6 +67,7 @@ class Cliente(models.Model):
     
 class Contacto(models.Model):
     id_contacto = models.AutoField(primary_key=True)
+    fecha_registro = models.DateField(auto_now_add=True)
     nombre_contacto = models.CharField(max_length=100)
     apellido_contacto = models.CharField(max_length=100)
     identificacion = models.CharField(max_length=50)
