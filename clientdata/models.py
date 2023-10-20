@@ -7,6 +7,10 @@ class Industria(models.Model):
     fecha_registro = models.DateField(auto_now_add=True)
     nombre_industria = models.CharField(max_length=100)
     
+    class Meta:
+        verbose_name = "Industria (Clientes)"
+        verbose_name_plural = "Industrias (Clientes)"    
+    
     def __str__(self):
         return self.nombre_industria
     
@@ -15,6 +19,10 @@ class Status(models.Model):
     id_status = models.AutoField(primary_key=True)
     fecha_registro = models.DateField(auto_now_add=True)
     status = models.CharField(max_length=100)
+    
+    class Meta:
+        verbose_name = "Estado (Clientes)"
+        verbose_name_plural = "Estados (Clientes)"    
     
     def __str__(self):
         return self.status
@@ -25,6 +33,10 @@ class Operacion(models.Model):
     fecha_registro = models.DateField(auto_now_add=True)
     operacion = models.CharField(max_length=100)
     
+    class Meta:
+        verbose_name = "Operacion (Clientes)"
+        verbose_name_plural = "Operaciones (Clientes)"   
+    
     def __str__(self):
         return self.operacion
 
@@ -34,6 +46,10 @@ class Entidad(models.Model):
     fecha_registro = models.DateField(auto_now_add=True)
     entidad = models.CharField(max_length=100)
     
+    class Meta:
+        verbose_name = "Entidad (Clientes)"
+        verbose_name_plural = "Entidades (Clientes)"
+            
     def __str__(self):
         return self.entidad
     
@@ -42,6 +58,10 @@ class Localidad(models.Model):
     id_localidad = models.AutoField(primary_key=True)
     fecha_registro = models.DateField(auto_now_add=True)
     localidad = models.CharField(max_length=100)
+    
+    class Meta:
+        verbose_name = "Localidad (Clientes)"
+        verbose_name_plural = "Localidades (Clientes)"    
     
     def __str__(self):
         return self.localidad
@@ -61,6 +81,10 @@ class Cliente(models.Model):
     industria = models.ForeignKey(Industria, on_delete=models.PROTECT)
     site = models.ForeignKey(Localidad, on_delete=models.PROTECT)
     
+    class Meta:
+        verbose_name = "Cliente"
+        verbose_name_plural = "Clientes"    
+    
     def __str__(self):
         return self.nombre_empresa
     
@@ -75,3 +99,7 @@ class Contacto(models.Model):
     correo = models.EmailField(unique=True)
     telefono = models.CharField(max_length=50)
     cargo = models.CharField(max_length=100)
+    
+    class Meta:
+        verbose_name = "Contacto (Clientes)"
+        verbose_name_plural = "Contactos (Clientes)"    

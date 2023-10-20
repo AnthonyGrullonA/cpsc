@@ -6,7 +6,11 @@ class servicios(models.Model):
     id_servicios = models.AutoField(primary_key=True)
     fecha_registro = models.DateField(auto_now_add=True)
     nombre_servicio = models.CharField(max_length=100)
-
+    
+    class Meta:
+        verbose_name = "Servicio"
+        verbose_name_plural = "Servicios" 
+        
     def __str__(self):
         return self.nombre_servicio
 
@@ -14,6 +18,10 @@ class status(models.Model):
     id_status = models.AutoField(primary_key=True)
     fecha_registro = models.DateField(auto_now_add=True)
     estado_status = models.CharField(max_length=100)
+    
+    class Meta:
+        verbose_name = "Estado (Servicios)"
+        verbose_name_plural = "Estados (Servicios)" 
     
     def __str__(self):
         return self.estado_status
@@ -27,6 +35,11 @@ class Ordenes_De_Servicio(models.Model):
     status = models.ForeignKey(status, on_delete=models.PROTECT)
     fecha_inicio = models.DateField(auto_now_add=True)
     
+    
+    class Meta:
+        verbose_name = "Orden de servicio"
+        verbose_name_plural = "Ordenes de servicios" 
+    
     def __str__(self):
-        return f"Orden de Servicio: {self.nomeclatura_ods}" 
+        return f"Orden de Servicio: {self.nomeclatura_ods} | Cliente: {self.clientes}" 
 

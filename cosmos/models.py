@@ -23,6 +23,8 @@ class Acl(models.Model):
         managed = False
         db_table = 'acl'
         db_table_comment = 'Tabla con el ACL de los clientes'
+        verbose_name = "ACL (Operaciones)"
+        verbose_name_plural = "ACLs (Operaciones)"
 
 
 class AclTemporal(models.Model):
@@ -41,6 +43,8 @@ class AclTemporal(models.Model):
         managed = False
         db_table = 'acl_temporal'
         db_table_comment = 'Tabla con el ACL de los clientes'
+        verbose_name = "ACL Temporal (Operaciones)"
+        verbose_name_plural = "ACLs Temporales (Operaciones)"
 
 
 class Acls(models.Model):
@@ -57,6 +61,8 @@ class Acls(models.Model):
         managed = False
         db_table = 'acls'
         db_table_comment = 'Tabla con el ACL de los clientes'
+        verbose_name = "ACL"
+        verbose_name_plural = "ACLs"
 
 
 class AuthGroup(models.Model):
@@ -186,6 +192,8 @@ class Empresas(models.Model):
         managed = False
         db_table = 'empresas'
         db_table_comment = 'Tabla de los Clientes/Empresas'
+        verbose_name = "Empresa"
+        verbose_name_plural = "Empresas"
 
 
 class GridLocation(models.Model):
@@ -200,6 +208,8 @@ class GridLocation(models.Model):
         managed = False
         db_table = 'grid_location'
         db_table_comment = 'Tabla que guarda los Grid Location'
+        verbose_name = "Tarjeta de entrada"
+        verbose_name_plural = "Tarjetas de entrada"
 
 
 class Historial(models.Model):
@@ -219,6 +229,8 @@ class Historial(models.Model):
         managed = False
         db_table = 'historial'
         db_table_comment = 'Formulario Registro'
+        verbose_name = "Historial"
+        verbose_name_plural = "Historial"
 
 
 class HistorialSoc(models.Model):

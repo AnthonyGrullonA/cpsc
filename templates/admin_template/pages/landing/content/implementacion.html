@@ -47,6 +47,10 @@
                 <td>{{ c.titulo }}</td> 
                 <td>{{ c.status_interno }}</td>
 
+                {% empty %}
+                <tr>
+                  <td colspan="8">No hay registros disponibles.</td>
+                </tr>                
               {% endfor %}
                 
        
